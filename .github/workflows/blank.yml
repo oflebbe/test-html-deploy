@@ -11,8 +11,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: ./deploy.sh
-      with:
-        NAME: ${{ secrets.user }}
       env:
         NAME: ${{ secrets.user }} 
     - name: Run a multi-line script

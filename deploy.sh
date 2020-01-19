@@ -1,6 +1,7 @@
 #!/bin/sh
 
-echo $user
 echo '#########################'
 echo $NAME
+echo x${NAME}x
+echo $NAME | wc -c
 echo '+++++++++++++++++++++++++'

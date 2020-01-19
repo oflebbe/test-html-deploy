@@ -12,7 +12,7 @@ jobs:
     - name: Run a one-line script
       run: ./deploy.sh
       env:
-        NAME: $user 
+        NAME: ${{ user }} 
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,

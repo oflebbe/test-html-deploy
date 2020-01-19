@@ -9,11 +9,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: ./deploy.sh
-      env:
-        NAME: ${{ secrets.user }} 
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - name: Upload
+      uses: oflebbe/ftp-action@releases/v1
+      with:
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        localDir: "."
+        remoteDir: "/public_html/automatic"
+

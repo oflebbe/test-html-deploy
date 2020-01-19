@@ -16,5 +16,5 @@ jobs:
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         localDir: "."
-        remoteDir: "/public_html/automatic"
+        remoteDir: "/a"
 
